@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="tenco | Daniel Tenconi">
+    <meta name="description" content="">
+    <meta name="keywords" content="seguros, cotizacion, auto, hogar, vida, poliza">
+    <title>CH | Entrega Final JS</title>
+    <link rel="shortcut icon" href="img/favicon-b-33.png" type="image/x-icon">
+    <!--CDN Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Estilo propio-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="img/tenco_logo_light.svg" alt="" height="30px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#quienes">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cotiza">Cotizador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contactenos</a>
+              </li>
+            </ul>
+            <span class="navbar-text">                
+              <a href="https://api.whatsapp.com/send?phone=+541168855268" target="_blank">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>                
+            </span>
+          </div>
+        </div>
+      </nav>
+
+    <!--Intro-->
+      <section class="d-flex justify-content-center align-items-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <img src="img/tenco_logo_dark.svg" alt="" class="brand">
+            <h3 class="slogan">Tu mejor elección en seguros</h3>
+        </div>
+        
+      </section>
+
+      <!--Nosotros-->
+    <section id="quienes">
+        <div class="container">
+            <div class="row">
+                <h2>¿Quiénes somos?</h2>
+                <div class="col-5 d-flex justify-content-center align-items-center">
+                    <img src="img/shield.svg" alt="" class="img-fluid rounded img-escudo">
+                </div>
+                <div class="col-7 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione amet excepturi odio distinctio vel enim quis sequi, deleniti alias maxime voluptate, debitis consequuntur rem fuga aliquam. Atque dignissimos minima optio?
+                Amet repellendus nemo dolorum blanditiis enim modi nostrum, beatae, quo, impedit dolor tempore necessitatibus debitis. Dolorum corporis esse reiciendis error cumque laboriosam delectus accusantium a dignissimos? Beatae ipsa velit modi.
+                Ut itaque suscipit assumenda mollitia illo ullam ipsam nobis eveniet unde. Quibusdam deserunt voluptatum, perspiciatis magnam soluta perferendis ratione facilis accusamus nihil ad voluptate fuga nulla debitis quia sequi culpa.
+                Quo aut animi eos praesentium optio? Enim libero cum eligendi explicabo, ducimus necessitatibus nihil. Adipisci, dolorem doloremque quos rem quo ullam nisi sed harum, perspiciatis, ratione eum dolorum inventore rerum!</div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--Cotizador-->
+    <section id="cotiza">
+        <div class="container invitacion">
+            <div class="row interactive">
+                <h2>Descubre tu mejor seguro</h2>
+                <div class="row col-8" id="resultados"><!-- impresion/resultado JS -->
+                    
+                </div>
+
+                <!-- Fomrulario / Inputs -->
+                <div class="col-4 porta-form">
+                    <form action="" class="shadow">
+                        <input type="text" placeholder="Nombre" id="name">
+                        <input type="email" placeholder="Correo electrónico" id="email">
+
+                        <fieldset>
+                            <legend>Rubro</legend>
+                                <div class="porta-radio">
+                                <label for="rubro">Auto
+                                    <input type="radio" name="rubro" id="auto" value="Auto">
+                                </label>
+
+                                <label for="rubro">Hogar
+                                    <input type="radio" name="rubro" id="hogar" value="Hogar">
+                                </label>
+
+                                <label for="rubro">Vida 
+                                    <input type="radio" name="rubro" id="vida" value="Vida">
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Compañia</legend>
+                            <div class="porta-radio">
+                                <label for="cia">Integrity
+                                    <input type="radio" name="cia" id="int" value="Integrity Seguros">
+                                </label>
+
+                                <label for="cia">LMA
+                                    <input type="radio" name="cia" id="lma" value="Mercantil Andina">
+                                </label>
+
+                                <label for="cia">SMG 
+                                    <input type="radio" name="cia" id="smg" value="Swiss Medical Group">
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <label for="suma">Suma asegurada
+                            <input type="number" name="suma" id="suma" value="50000">
+                        </label>
+
+                        <button type="submit" class="btn" id="button">Cotizar</button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Contacto-->
+    <section id="contacto">
+        <div class="container">
+            <h2>Contactenos</h2>
+            <div class="row col-md-8 col-sm-10 m-auto d-sm-flex justify-content-center">                 
+                <div class="cause rounded shadow-sm bg-primary row">
+
+                    <div class="text-white col-6 siniestro">
+                        <h3>En caso de un siniestro, detallá lo acontecido</h3>
+                        <p>Comentanos lo ocurrido y nos comunicaremos a la brevedad. </p>
+                    </div>
+                    
+                    <div class="text-white col-6 mensaje">
+                        <h3>Si querés enviarnos una consulta:</h3>
+                        <p>Favor de dejarnos tu consulta o comunicarte con nuestros operadores. </p>
+                    </div>
+
+
+                    <!--forms x 2-->
+                    <form action="" id="mensaje">
+                        <legend>Dejar consulta</legend>
+                        <input type="text" placeholder="Nombre">
+                        <input type="tel" placeholder="Teléfono">
+                        <input type="email" placeholder="Casilla de correo">
+                        <textarea name="" placeholder="Dejenos su mensaje" id=""></textarea>
+                        <button class="btn btn-success" id="consultar">Enviar</button>
+                    </form>
+
+                    <form action="" id="siniestro">
+                        <legend>Informar Siniestro</legend>
+                        <input type="text" placeholder="Nombre">
+                        <input type="tel" placeholder="Teléfono">
+                        <input type="email" placeholder="Casilla de correo">
+                        <input type="number" placeholder="N° Póliza">
+                        <textarea name="" placeholder="Dejenos su mensaje" id=""></textarea>
+                        <button class="btn btn-danger" id="siniestro
+                        ">Enviar</button>
+                    </form>                    
+                </div>
+                </div>
+            
+    </section>
+    <!--Api Clima-->
+    <div id="clima" class="shadow">
+        <div class="container funtom">
+            <div class="row portapi">   
+                    <div class="porta-clima">
+                        <div class="info">
+                            <div id="temp"></div>
+                            <div id="ico"></div>
+                        </div>
+
+                        <div class="localidad" id="localidad"><i class="bi bi-geo-alt-fill"></i> </div>
+
+                        <div class="porta-extra">
+                            <div id="feels"><i class="bi bi-stars"></i></div>
+                            <div id="wind"><i class="bi bi-wind"></i></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+            <i class="bi bi-chevron-compact-right chevron chevon"></i>
+            <i class="bi bi-chevron-compact-left chevron chevof"></i>
+    </div>
+      <!--Button UP-->  
+      <button class="subir hiden">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+    </button>
+
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <img src="img/tenco_logo_light.svg" alt="" height="50px">
+                </div>
+                <div class="col">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                       
+                        <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#quienes">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#cotiza">Cotizador</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contactenos</a>
+                        </li>
+                        <li>
+                            <span class="navbar-text">                
+                                <a href="https://api.whatsapp.com/send?phone=+541168855268" target="_blank">
+                                    <i class="bi bi-whatsapp"></i>
+                                  </a>
+                                  <a href="#" target="_blank">
+                                      <i class="bi bi-facebook"></i>
+                                  </a>                
+                              </span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <!--Script Bootstrap 5-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--CDN jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!--API-->
+    <script src="js/clima.js"></script>
+    <!--Funcionalidad / Despliegue Api-->
+    <script src="js/api-show.js"></script>
+    <!--JS Personal-->
+    <script src="js/app.js"></script>
+</body>
+</html>
